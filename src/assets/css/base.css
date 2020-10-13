@@ -1,0 +1,518 @@
+@import "./normalize.css";
+/* :root -> 获取根元素html */
+:root {
+  --color-text: #aaa;
+  --color-high-text: #ff5777;
+  --color-tint: #ff8198;
+  --color-background: #fff;
+  --font-size:14px;
+  --line-height:1.5;
+}
+
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB",
+  "Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  user-select: none; /*禁止用户鼠标在页面上选中文字/图片等 */
+  -webkit-tap-highlight-color: transparent; /* webkit是苹果浏览器引擎，
+  tap点击， highlight背景高亮，color颜色，颜色用数值调整 */
+  background: var(--color-background);
+  color: var(--color-text);
+  /* rem vw/vh */
+  width: 100vw;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.clear-fix::after {
+  clear: both;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.clear-fix {
+  zoom: 1;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+/* 设置滚动条样式 */
+.scroll-bar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  border-radius: 10px;
+  background-color:rgba(0, 24, 82, .9);
+}
+
+.scroll-bar::-webkit-scrollbar {
+  width: 2px;
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+.scroll-bar::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  border-radius: 10px;
+  background-color: rgba(49, 78, 172, 0.9);
+}
+
+
+/* 下拉菜单滚动条样式修改 */
+.ant-select-dropdown-menu::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  border-radius: 10px;
+  background-color:rgba(0, 24, 82, .9);
+}
+
+.ant-select-dropdown-menu::-webkit-scrollbar {
+  width: 2px;
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+.ant-select-dropdown-menu::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  border-radius: 10px;
+  background-color: rgba(49, 78, 172, 0.9);
+}
+
+/* table滚动条样式修改 */
+.ant-table-body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  border-radius: 0px;
+  background-color:rgba(0, 24, 82, .9);
+}
+
+
+.ant-table-body::-webkit-scrollbar-corner {
+  background-color: rgba(0, 24, 82, .9);
+
+}
+
+.ant-table-body::-webkit-scrollbar {
+  width: 2px;
+  height: 8px;
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+.ant-table-body::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  border-radius: 10px;
+  background-color: rgba(49, 78, 172, 0.9);
+}
+
+ 
+/* layout滚动条样式修改 */
+.ant-layout::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  border-radius: 10px;
+  background-color:rgba(0, 24, 82, .9);
+}
+
+.ant-layout::-webkit-scrollbar {
+  width: 2px;
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+.ant-layout::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  border-radius: 10px;
+  background-color: rgba(49, 78, 172, 0.9);
+}
+
+/* ant组件公共样式 */
+
+/* 下拉选择框字体颜色 */
+.ant-select-dropdown-menu-item-selected,
+.ant-select-dropdown-menu-item {
+  color: rgba(255, 255, 255, .65);
+}
+/* 下拉选择框选项样式 */
+.ant-select-selection--multiple .ant-select-selection__choice {
+  background-color: rgba(13, 101, 204,0.7);
+  border: none;
+  color: #D7DFE7;
+}
+
+/* 日历 日期图标样式 */
+.ant-calendar-picker-icon {
+  color: #D7DFE7;
+}
+
+/* 日历 日期输入框样式 */
+.ant-input {
+  background-color: transparent;
+  border: 1px solid #0D65CC;
+  color: #D7DFE7;
+}
+
+/* 日历容器 */
+.ant-calendar {
+  background-color: rgba(4,34,133,0.9);
+  border: none;
+}
+
+/* 日历样式：日期显示框 */
+.ant-calendar-input-wrap {
+  background-color: transparent;
+  border-bottom: 1px solid #054A98
+}
+
+.ant-calendar-input {
+  color: white;
+  background: transparent;
+}
+
+/* 日历样式：年份 + 月份选择 */
+.ant-calendar-header .ant-calendar-year-select, 
+.ant-calendar-header .ant-calendar-month-select,
+.ant-calendar-year-panel-header .ant-calendar-year-panel-decade-select {
+  color: white;
+}
+
+/* 日历样式：年、月翻页 */
+.ant-calendar-header .ant-calendar-next-month-btn::before, 
+.ant-calendar-header .ant-calendar-next-month-btn::after,
+.ant-calendar-header .ant-calendar-next-century-btn::before, 
+.ant-calendar-header .ant-calendar-next-decade-btn::before, 
+.ant-calendar-header .ant-calendar-next-year-btn::before, 
+.ant-calendar-header .ant-calendar-next-century-btn::after, 
+.ant-calendar-header .ant-calendar-next-decade-btn::after, 
+.ant-calendar-header .ant-calendar-next-year-btn::after,
+.ant-calendar-header .ant-calendar-prev-month-btn::before, 
+.ant-calendar-header .ant-calendar-prev-month-btn::after,
+.ant-calendar-header .ant-calendar-prev-year-btn::after,
+.ant-calendar-header .ant-calendar-prev-year-btn::before，
+{
+  border: 0 solid white;
+  border-width: 1.5px 0 0 1.5px;
+}
+
+.ant-calendar-header .ant-calendar-next-month-btn:hover::before, 
+.ant-calendar-header .ant-calendar-next-month-btn:hover::after,
+.ant-calendar-header .ant-calendar-next-century-btn:hover::before, 
+.ant-calendar-header .ant-calendar-next-decade-btn:hover::before, 
+.ant-calendar-header .ant-calendar-next-year-btn:hover::before, 
+.ant-calendar-header .ant-calendar-next-century-btn:hover::after, 
+.ant-calendar-header .ant-calendar-next-decade-btn:hover::after, 
+.ant-calendar-header .ant-calendar-next-year-btn:hover::after,
+.ant-calendar-header .ant-calendar-prev-year-btn:hover::before,
+.ant-calendar-header .ant-calendar-prev-month-btn:hover::before,
+.ant-calendar-header .ant-calendar-prev-year-btn:hover::after{
+  border-color: red;
+}
+
+/* 日历头部下划线 */
+.ant-calendar-header {
+  border-bottom: 1px solid #054A98
+}
+
+/* 日历 星期所在栏 */
+.ant-calendar-column-header .ant-calendar-column-header-inner {
+  color: #c1c1c1;
+}
+
+/* 日历 非当前月份日期颜色 */
+.ant-calendar-last-month-cell .ant-calendar-date,
+.ant-calendar-next-month-btn-day .ant-calendar-date{
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* 日历 当前日期颜色 */
+.ant-calendar-date {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* 选中日期的背景颜色 */
+.ant-calendar-selected-day .ant-calendar-date {
+  background: #0F5EEF;
+}
+
+/* 选中日期 hover */
+.ant-calendar-date:hover {
+  background: #357CFF;
+}
+
+
+.ant-calendar-today .ant-calendar-date {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* 日历 页脚 */
+.ant-calendar-footer {
+  border-top: 1px solid #054A98
+}
+
+/* 页脚 确认按钮 */
+.ant-calendar .ant-calendar-ok-btn {
+  background-color: #0F5EEF;
+  border-color: #0F5EEF;
+}
+
+/* 页脚 确认按钮 */
+.ant-calendar .ant-calendar-ok-btn:hover, 
+.ant-calendar .ant-calendar-ok-btn:focus {
+  background-color: #357CFF;
+  border-color: #357CFF;
+}
+
+/* 日历 年份选择框 */
+.ant-calendar-year-panel-header {
+  background: rgba(4,32,125,0.9);
+  border-bottom: 1px solid #054A98;
+}
+
+/* 日历 年份选择框 */
+.ant-calendar-year-panel-body {
+  background: rgba(4,32,125,0.9);
+}
+
+/* 日历 年份选择框 年代选择按钮*/
+.ant-calendar-year-panel-header .ant-calendar-year-panel-prev-decade-btn::before,
+.ant-calendar-year-panel-header .ant-calendar-year-panel-prev-decade-btn::after,
+.ant-calendar-year-panel-header .ant-calendar-year-panel-next-decade-btn::before,
+.ant-calendar-year-panel-header .ant-calendar-year-panel-next-decade-btn::after {
+  border: 0 solid white;
+  border-width: 1.5px 0 0 1.5px;
+}
+
+.ant-calendar-year-panel-header .ant-calendar-year-panel-prev-decade-btn:hover::before,
+.ant-calendar-year-panel-header .ant-calendar-year-panel-prev-decade-btn:hover::after,
+.ant-calendar-year-panel-header .ant-calendar-year-panel-next-decade-btn:hover::before, 
+.ant-calendar-year-panel-header .ant-calendar-year-panel-next-decade-btn:hover::after {
+  border-color: red
+}
+
+/* 日历 年份选择按钮*/
+.ant-calendar-year-panel-year {
+  color: rgba(255, 255, 255, 0.65)
+}
+
+/* 日历 年份选择非当前年代按钮*/
+.ant-calendar-year-panel-last-decade-cell .ant-calendar-year-panel-year,
+.ant-calendar-year-panel-next-decade-cell .ant-calendar-year-panel-year {
+  color: rgba(255, 255, 255, 0.25)
+}
+
+/* 日历 年份选中背景  */
+.ant-calendar-year-panel-selected-cell .ant-calendar-year-panel-year {
+  background: #0F5EEF;
+}
+.ant-calendar-header a:hover {
+  color: white;
+}
+/* 日历 年份选择 hover 动作  */
+.ant-calendar-year-panel-year:hover {
+  background: #357CFF;
+  color: white;
+}
+
+/* 日历 年代选择容器 */
+.ant-calendar-decade-panel-header {
+  background: rgba(4,32,125,0.9);
+  border-bottom: 1px solid #054A98;
+}
+
+/* 日历 年代选择容器 */
+.ant-calendar-decade-panel-body {
+  background: rgba(4,32,125,0.9);
+}
+
+/* 日历 年代选择 当前世纪 */
+.ant-calendar-decade-panel-header {
+  color: white;
+}
+
+/* 日历 年代选择 世纪切换按钮 */
+.ant-calendar-decade-panel-header .ant-calendar-decade-panel-prev-century-btn::before,
+.ant-calendar-decade-panel-header .ant-calendar-decade-panel-prev-century-btn::after,
+.ant-calendar-decade-panel-header .ant-calendar-decade-panel-next-century-btn::before,
+.ant-calendar-decade-panel-header .ant-calendar-decade-panel-next-century-btn::after {
+  border: 0 solid white;
+  border-width: 1.5px 0 0 1.5px;
+}
+
+.ant-calendar-decade-panel-header .ant-calendar-decade-panel-prev-century-btn:hover::before,
+.ant-calendar-decade-panel-header .ant-calendar-decade-panel-prev-century-btn:hover::after,
+.ant-calendar-decade-panel-header .ant-calendar-decade-panel-next-century-btn:hover::before,
+.ant-calendar-decade-panel-header .ant-calendar-decade-panel-next-century-btn:hover::after {
+  border-color: red
+}
+
+/* 日历 年代选择按钮 */
+.ant-calendar-decade-panel-decade {
+  color: rgba(255, 255, 255, 0.65)
+}
+
+/* 日历 年代选择非当前世纪按钮 */
+.ant-calendar-decade-panel-last-century-cell .ant-calendar-decade-panel-decade, 
+.ant-calendar-decade-panel-next-century-cell .ant-calendar-decade-panel-decade {
+  color: rgba(255, 255, 255, 0.25)
+}
+
+/* 日历 年代选中样式 */
+.ant-calendar-decade-panel-selected-cell .ant-calendar-decade-panel-decade {
+  color: #fff;
+  background: #0F5EEF;
+}
+
+/* 日历 年代选择 hover */
+.ant-calendar-decade-panel-decade:hover {
+  background: #357CFF;
+}
+
+/* 日历 月份选择容器 */
+.ant-calendar-month-panel-header {
+  background: rgba(4,32,125,0.9);
+  border-bottom: 1px solid #054A98;
+}
+
+/* 日历 月份选择容器 */
+.ant-calendar-month-panel-body {
+  background: rgba(4,32,125,0.9);
+}
+
+/* 日历 月份选择 当前年份 */
+.ant-calendar-month-panel-header .ant-calendar-month-panel-year-select {
+  color: white;
+}
+
+/* 日历 月份选择 下一年按钮 */
+.ant-calendar-month-panel-header .ant-calendar-month-panel-prev-year-btn::before,
+.ant-calendar-month-panel-header .ant-calendar-month-panel-prev-year-btn::after,
+.ant-calendar-month-panel-header .ant-calendar-month-panel-next-year-btn::before,
+.ant-calendar-month-panel-header .ant-calendar-month-panel-next-year-btn::after {
+  border: 0 solid white;
+  border-width: 1.5px 0 0 1.5px;
+}
+
+.ant-calendar-month-panel-header .ant-calendar-month-panel-prev-year-btn:hover::before,
+.ant-calendar-month-panel-header .ant-calendar-month-panel-prev-year-btn:hover::after,
+.ant-calendar-month-panel-header .ant-calendar-month-panel-next-year-btn:hover::before,
+.ant-calendar-month-panel-header .ant-calendar-month-panel-next-year-btn:hover::after {
+  border-color: red
+}
+
+/* 日历 月份选择 当前年的月份 */
+.ant-calendar-month-panel-month {
+  color: rgba(255, 255, 255, 0.65)
+}
+
+/* 日历 月份选中样式 */
+.ant-calendar-month-panel-selected-cell .ant-calendar-month-panel-month  {
+  color: #fff;
+  background: #0F5EEF;
+}
+
+/* 日历 月份选择 hover */
+.ant-calendar-month-panel-month:hover {
+  background: #357CFF;
+}
+
+/* 日历 时分秒选择容器 */
+.ant-calendar-time-picker-select {
+  background: rgba(4,32,125,0.9);
+  border-right: 1px solid #054A98;
+}
+
+/* 日历 时分秒选择容器 */
+li.ant-calendar-time-picker-select-option-selected {
+  background: rgba(4,32,125,0.9);
+
+}
+
+/* 日历 时分秒选中颜色 */
+.ant-calendar-time-picker-select ul .ant-calendar-time-picker-select-option-selected {
+  color: white;
+}
+
+/* 日历 时分秒选择颜色 */
+.ant-calendar-time-picker-select li {
+  color: rgba(255, 255, 255, 0.65)
+}
+
+/* 日历 时分秒选择 hover */
+.ant-calendar-time-picker-select li:hover {
+  background: #357CFF;
+}
+
+/* 禁选日期格式 */
+.ant-calendar-disabled-cell .ant-calendar-date {
+  background: none;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* 禁选日期格式 hover  */
+.ant-calendar-disabled-cell .ant-calendar-date:hover {
+  background: none;
+}
+
+.ant-calendar-last-month-cell .ant-calendar-date:hover {
+  color: rgba(255, 255, 255, 0.25)
+}
+
+/* message组件弹窗会被日历遮挡，调整message组件的z-index */
+.ant-message {
+  z-index: 2222;
+}
+
+/* pagination组件样式 */
+.ant-pagination-prev .ant-pagination-item-link, 
+.ant-pagination-next .ant-pagination-item-link,
+.ant-pagination-item  {
+  background: rgba(0, 24, 82, .9);
+  border: 1px solid rgba(3, 75, 241, 0.4);
+}
+
+.ant-pagination-item-active {
+  border: 1px solid #1A9CF2;
+}
+
+.ant-pagination-item-link .anticon-left, .anticon-right,
+.ant-pagination-item a, .ant-pagination-item-active a {
+  color: rgb(255, 255, 255);
+}
+
+.ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-ellipsis, 
+.ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-ellipsis {
+  color: rgba(255, 255, 255, .75);
+}
+.ant-calendar-time .ant-calendar-day-select {
+  color: white;
+}
+
+/* 鼠标移动到某一行时的背景颜色,根据antd源码修改 */
+.ant-table-thead>tr.ant-table-row-hover:not(.ant-table-expanded-row)>td,
+.ant-table-tbody>tr.ant-table-row-hover:not(.ant-table-expanded-row)>td,
+.ant-table-thead>tr:hover:not(.ant-table-expanded-row)>td,
+.ant-table-tbody>tr:hover:not(.ant-table-expanded-row)>td {
+  background: rgb(61, 62, 117) !important;
+}

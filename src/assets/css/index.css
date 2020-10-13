@@ -1,0 +1,288 @@
+/* 中间分类模块 */
+.grid {
+  height: 480px;
+}
+.grid-col1 {
+  width: 190px;
+  height: 100%;
+  background-color: #6e6568;
+  color: #fff;
+  font-size: 14px;
+  position: relative;
+}
+
+.ad {
+  width: 250px;
+  height: 480px;
+  position: absolute;
+  top: 0;
+  left: -250px;
+}
+
+.ad-r {
+  position: absolute;
+  top: 0;
+  left: 250px;
+  z-index: 999;
+  width: 0;
+  height: 480px;
+  background: url(../images/ad-r.jpg);
+  transition: all 0.8s;
+}
+
+.ad:hover .ad-r {
+  width: 990px;
+}
+
+.grid-col1 a {
+  color: #fff;
+  font-size: 14px;
+  margin: 0 3px;
+}
+
+.grid-col1 a:hover {
+  color: #f10512;
+}
+.grid-col1 ul {
+  padding: 10px 0;
+}
+
+.grid-col1 ul li {
+  padding-left: 12px;
+  height: 29px;
+  line-height: 26px;
+}
+
+.grid-col1 ul li:hover {
+  background-color: #9c9698;
+}
+
+.grid-col2 {
+  width: 790px;
+  height: 100%;
+  margin-left: 10px;
+}
+
+/* banner部分 */
+.grid-col2-b div {
+  float: left;
+  margin-top: 10px;
+}
+
+.grid-col2-b div:last-child {
+  float: right;
+  margin-top: 10px;
+}
+
+/* 箭头部分 */
+
+.grid-col2-t {
+  position: relative;
+}
+
+.arrow-l,
+.arrow-r {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 60px;
+  background: rgba(0, 0, 0, .3);
+  transform: translateY(-50%);
+  text-align: center;
+  line-height: 60px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, .3);;
+  font-family: arial;
+  font-weight: normal;
+}
+
+.arrow-l {
+  left: 0;
+}
+
+.arrow-r {
+  right: 0;
+}
+
+.circle {
+  width: 167px;
+  height: 20px;
+  background: rgba(255, 255, 255, .3);
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  padding-left: 8px;
+}
+
+.circle li {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  float: left;
+  margin: 4px;
+  cursor: pointer;
+}
+
+.circle .current {
+  background-color: #f10512;
+}
+
+.grid-col3 {
+  width: 190px;
+  height: 100%;
+}
+
+.login {
+  height: 85px;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  padding: 15px;
+}
+
+.login-t {
+  width: 95px;
+  font-size: 12px;
+  white-space: nowrap;/*强制一行显示*/
+  overflow: hidden;/*溢出隐藏*/
+  text-overflow: ellipsis;/*超出部分显示 省略号*/
+  color: #666;
+  padding-left: 60px;
+  height: 60px;
+  line-height: 20px;
+  position: relative;
+}
+
+.login-t a {
+  color: #666;
+}
+
+.login-t a:hover {
+  color: #f10512;
+}
+
+.user-info {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url(../images/sprite_userinfo@1x.png) no-repeat -70px 0;
+  /* border-radius: 50%;
+  overflow: hidden; */
+}
+
+.user-info img {
+  width: 40px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.login-b a {
+  display: inline-block;
+  width: 70px;
+  height: 20px;
+  line-height: 20px;
+  border: 2px solid #f10512;
+  margin-right: 3px;
+  text-align: center;
+  color: #f10512;
+}
+
+.login-b a:hover {
+  color: #fff;
+  background-color: #f10512;
+}
+
+.news {
+  height: 154px;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  padding: 7px 13px 0;
+  box-sizing: border-box;
+}
+
+.news-t {
+  height: 19px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+.news-t a {
+  float: left;
+  height: 17px;
+  line-height: 17px;
+}
+
+.cuxiao {
+  width: 38px;
+  border-right: 1px solid #ccc;
+}
+
+.gg {
+  margin-left: 15px;
+}
+
+.news-t .more {
+  float: right;
+}
+
+.news-t div {
+  height: 2px;
+  width: 28px;
+  background-color: #f10512;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+
+.new-b {
+  padding-top: 15px;
+}
+
+.new-b li {
+  height: 23px;
+  line-height: 23px;
+}
+
+.expand {
+  height: 209px;
+  background-color: #fff;
+  overflow: hidden; /*expand宽度继承了父亲190宽度*/
+}
+
+.expand ul {
+  width: 195px;
+}
+
+.expand li {
+  width: 47px;
+  height: 69px;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  float: left;
+}
+
+.expand li a {
+  display: block;
+  padding-top: 15px;
+  text-align: center;
+}
+
+
+.expand li i {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  background: url(../images/sprite_fs@1x.png) no-repeat;
+}
+
+.expand li:first-child i {
+  width: 18px;
+  height: 23px;
+  background-position: -5px -88px;
+}
+
+
